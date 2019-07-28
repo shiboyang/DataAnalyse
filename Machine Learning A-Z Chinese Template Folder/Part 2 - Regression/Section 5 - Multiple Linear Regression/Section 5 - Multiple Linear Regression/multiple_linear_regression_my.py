@@ -43,6 +43,7 @@ import statsmodels.formula.api as sm
 x_train = np.append(np.ones(shape=(40,1)), values=x_train, axis=1)
 x_opt = x_train[:,[0,1,2,3,4,5]]
 regressor_OLS = sm.OLS(endog=y_train, exog=x_opt).fit()
+# 输出模型的测试结果
 regressor_OLS.summary()
 
 # remove x2
